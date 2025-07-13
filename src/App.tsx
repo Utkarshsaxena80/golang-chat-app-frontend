@@ -54,7 +54,8 @@ function App() {
   };
 
   const enterRoom = (room: string) => {
-    const socket = new WebSocket(`ws://localhost:8080/ws?room_id=${room}`);
+    const socket = new WebSocket(`ws://websockets-in-golang.onrender.com/ws?room_id=${room}`);
+  
 
     socket.onopen = () => {
       console.log("Connected to room:", room);
